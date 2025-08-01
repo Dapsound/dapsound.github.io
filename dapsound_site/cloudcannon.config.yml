@@ -1,0 +1,9 @@
+collections:
+  posts:
+    output: true
+
+editable_regions:
+  - path: index.md
+    label: Página principal
+    editor:
+      type: visual
