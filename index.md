@@ -11,34 +11,55 @@
       background-color: #f5efe3; /* beige claro */
       color: #3a3a3a;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .hero {
+      background-color: #605e56;
+      color: white;
+      padding: 100px 20px;
       text-align: center;
     }
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
     }
 
-    p {
+    .contenido {
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: center;
       font-size: 1.2rem;
-      color: #555;
+      line-height: 1.6;
+      padding: 0 20px;
     }
 
     footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.8rem;
-      color: #888;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: auto;
     }
   </style>
 </head>
 <body>
-  <h1>Estamos en mantenimiento</h1>
-  <p>Estamos trabajando para ofrecerte una mejor experiencia.<br>Volveremos pronto. ¡Gracias por tu paciencia!</p>
-  <footer>&copy; 2025 DapSound. Todos los derechos reservados.</footer>
+  <div class="hero">
+    <h1>Bienvenido a DapSound</h1>
+  </div>
+
+  <div class="contenido">
+    <p>Actualmente estamos en mantenimiento, estamos trabajando para ofrecerte la mejor experiencia posible.</p>
+    <p>Volveremos pronto con muchas novedades.</p>
+    <p>¡Gracias por tu paciencia!</p>
+    <p>Si tienes dudas, puedes ponerte en contacto en: <a href="mailto:dani@dapsound.com">dani@dapsound.com</a></p>
+    <p><em>Equipo DapSound</em></p>
+  </div>
+
+  <footer>
+    &copy; 2025 DapSound. Todos los derechos reservados.
+  </footer>
 </body>
 </html>
