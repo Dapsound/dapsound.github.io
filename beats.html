@@ -170,16 +170,12 @@
 <body>
   <h1>Beats</h1>
   
-<section class="intro-text">
-  <p>
-    En <strong>DapSound</strong>, no vendemos beats. Creamos experiencias sonoras a medida.<br>
-    Cada instrumental es una obra única, diseñada para elevar tu música a un nivel superior.<br>
-    Ofrecemos licencias personalizadas, adaptadas a tu visión y a tu estilo.<br>
-    Si buscas un sonido auténtico y exclusivo, estás en el lugar correcto.<br><br>
-    <a href="contacto.html">Contáctanos</a> y descubre cómo podemos ayudarte a sonar como ningún otro.
+    <p style="max-width: 800px; margin: 0 auto 30px; text-align: center; font-size: 1rem; line-height: 1.6;">
+    Nuestros beats son exclusivos y de alta calidad, pensados para elevar cualquier proyecto musical.  
+    Ofrecemos varias opciones de compra según tus necesidades: licencias estándar, exclusivas y personalizadas.  
+    Si estás buscando un sonido único o una instrumental hecha a medida, no dudes en <a href="contacto.html" style="color: #a58e75; font-weight: bold;">contactarnos</a>.
   </p>
-  
-</section>
+
   <form>
     <div class="filters">
       <label>BPM desde<input type="number"></label>
@@ -225,14 +221,11 @@
   <a class="volver-inicio" href="index.html">Volver al inicio</a>
 
   <script>
-function addToCart(item) {
-  if (cart.includes(item)) {
-    alert(`El beat "${item}" ya está en la cesta.`);
-    return;
-  }
-  cart.push(item);
-  updateCart();
-}
+    const cart = [];
+    function addToCart(item) {
+      cart.push(item);
+      updateCart();
+    }
     function removeFromCart(index) {
       cart.splice(index, 1);
       updateCart();
@@ -247,7 +240,7 @@ function addToCart(item) {
         emptyMsg.style.display = 'none';
         cart.forEach((item, index) => {
           const li = document.createElement('li');
-          li.innerHTML = `${item} <button class='remove-btn' onclick='removeFromCart(${index})'>X</button>`;
+          li.innerHTML = ${item} <button class='remove-btn' onclick='removeFromCart(${index})'>X</button>;
           cartItems.appendChild(li);
         });
       }
