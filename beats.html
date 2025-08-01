@@ -18,6 +18,48 @@
       font-family: 'Playfair Display', serif;
       font-size: 2.8rem;
     }
+
+    /* Estilos del nuevo apartado de filtros visuales */
+    .filtros-contenedor {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #e8e1d6;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .ordenar label {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .ordenar select {
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      font-size: 1rem;
+    }
+
+    .vista-opciones button {
+      background-color: #d6cabb;
+      border: none;
+      padding: 8px 12px;
+      margin-left: 8px;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .vista-opciones button:hover {
+      background-color: #cfc2b1;
+    }
+
     .filter-form {
       max-width: 1000px;
       margin: 0 auto 30px;
@@ -139,8 +181,28 @@
   </style>
 </head>
 <body>
+  
   <h1>Beats</h1>
 
+  <!-- NUEVO FILTRO VISUAL -->
+  <div class="filtros-contenedor">
+    <div class="ordenar">
+      <label for="ordenarPor">Ordenar por:</label>
+      <select id="ordenarPor" name="ordenarPor">
+        <option value="relevancia">Relevancia</option>
+        <option value="bpm">BPM</option>
+        <option value="key">Tonalidad</option>
+        <option value="genero">Género</option>
+      </select>
+    </div>
+
+    <div class="vista-opciones">
+      <button title="Vista de Lista">☰</button>
+      <button title="Vista de Cuadrícula">▦</button>
+    </div>
+  </div>
+
+  <!-- FORMULARIO DE FILTROS -->
   <form class="filter-form">
     <label>BPM
       <input type="number" placeholder="Ej. 120" />
