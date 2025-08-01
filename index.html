@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DapSound | Beats en venta</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #fdfaf6;
+      color: #2d2b2a;
+    }
+    header {
+      background-color: #e8dfd1;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      letter-spacing: 1px;
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .intro p {
+      font-size: 1.1em;
+      color: #4a4a4a;
+    }
+    .beats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .beat {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    .beat h3 {
+      margin-top: 0;
+    }
+    .buy-button {
+      display: inline-block;
+      background-color: #c6b89e;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+    .buy-button:hover {
+      background-color: #b1a487;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      padding: 20px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DapSound</h1>
+    <p>Instrumentales de alta calidad para tus proyectos</p>
+  </header>
+
+  <section class="intro">
+    <p>Escucha y compra beats directamente desde esta página. Próximamente añadiremos más funcionalidades.</p>
+  </section>
+
+  <section class="beats">
+    <div class="beat">
+      <h3>Ejemplo Beat #1</h3>
+      <audio controls style="width: 100%;">
+        <source src="https://www.example.com/beat1.mp3" type="audio/mp3" />
+        Tu navegador no soporta audio HTML.
+      </audio>
+      <br /><br />
+      <a class="buy-button" href="https://www.paypal.com" target="_blank">Comprar</a>
+    </div>
+
+    <div class="beat">
+      <h3>Ejemplo Beat #2</h3>
+      <audio controls style="width: 100%;">
+        <source src="https://www.example.com/beat2.mp3" type="audio/mp3" />
+        Tu navegador no soporta audio HTML.
+      </audio>
+      <br /><br />
+      <a class="buy-button" href="https://www.paypal.com" target="_blank">Comprar</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 DapSound — Todos los derechos reservados | <a href="mailto:contacto@dapsound.com">Contacto</a>
+  </footer>
+</body>
+</html>
