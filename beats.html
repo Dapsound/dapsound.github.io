@@ -18,9 +18,27 @@
       font-family: 'Playfair Display', serif;
       font-size: 2.8rem;
     }
+    .filter-form {
+      max-width: 1000px;
+      margin: 0 auto 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .filter-form label {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+    }
+    .filter-form select, .filter-form input {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
     .beats-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       max-width: 1200px;
       margin: 40px auto;
@@ -29,22 +47,36 @@
       background-color: #fffaf0;
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
       text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .beat:hover {
+      transform: translateY(-5px);
     }
     .beat h3 {
       margin: 10px 0;
+      font-size: 1.3rem;
     }
     .custom-player {
-      background-color: #f0e9da;
-      padding: 10px;
+      position: relative;
+      background-color: #eae1d3;
       border-radius: 10px;
-      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
-      margin: 10px 0;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 15px 0;
     }
     .custom-player audio {
       width: 100%;
-      outline: none;
+      height: 40px;
+    }
+    .custom-player::before {
+      content: '🎧';
+      font-size: 1.5rem;
+      margin-right: 10px;
     }
     .beat button {
       background-color: #ccc;
@@ -108,6 +140,53 @@
 </head>
 <body>
   <h1>Beats</h1>
+
+  <form class="filter-form">
+    <label>BPM
+      <input type="number" placeholder="Ej. 120" />
+    </label>
+    <label>Key
+      <select>
+        <option value="">Todas</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="E">E</option>
+        <option value="F">F</option>
+        <option value="G">G</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+      </select>
+    </label>
+    <label>Escala
+      <select>
+        <option value="">Todas</option>
+        <option>Mayor</option>
+        <option>Menor</option>
+        <option>Dórica</option>
+        <option>Frigia</option>
+        <option>Lidia</option>
+        <option>Mixolidia</option>
+        <option>Locria</option>
+      </select>
+    </label>
+    <label>Género
+      <select>
+        <option value="">Todos</option>
+        <option>Trap</option>
+        <option>Reggaeton</option>
+        <option>Dancehall</option>
+        <option>Pop</option>
+        <option>R&B</option>
+        <option>Drill</option>
+        <option>Hip Hop</option>
+        <option>Lo-Fi</option>
+        <option>Rap</option>
+      </select>
+    </label>
+    <label>Precio máx (€)
+      <input type="number" placeholder="Ej. 50" />
+    </label>
+  </form>
 
   <div class="cart">
     <div class="cart-icon">🛒</div>
