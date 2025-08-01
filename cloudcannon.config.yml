@@ -1,12 +1,9 @@
+collections:
+  posts:
+    output: true
 
-collections_config: []
-navigation:
-  - title: Inicio
-    url: /
-editor:
-  links: true
-  images: true
-  files: true
-  inputs:
-    - selector: "h1, p, a"
-      type: "text"
+editable_regions:
+  - path: index.md
+    label: Página principal
+    editor:
+      type: visual
