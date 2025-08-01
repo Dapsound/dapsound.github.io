@@ -221,11 +221,14 @@
   <a class="volver-inicio" href="index.html">Volver al inicio</a>
 
   <script>
-    const cart = [];
-    function addToCart(item) {
-      cart.push(item);
-      updateCart();
-    }
+function addToCart(item) {
+  if (cart.includes(item)) {
+    alert(`El beat "${item}" ya está en la cesta.`);
+    return;
+  }
+  cart.push(item);
+  updateCart();
+}
     function removeFromCart(index) {
       cart.splice(index, 1);
       updateCart();
