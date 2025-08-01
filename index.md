@@ -47,7 +47,7 @@
 </head>
 <body>
   <div class="hero">
-    <h1>Bienvenido a DapSound</h1>
+    <h1>Bienvenid@ a DapSound</h1>
   </div>
 
   <div class="contenido">
