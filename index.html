@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DapSound | En Mantenimiento</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -11,66 +12,74 @@
 
     body {
       margin: 0;
+      padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f5efe3;
       color: #3a3a3a;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 0;
-    }
-
-    .header {
-      width: 100%;
-      background-color: #5e5a52;
-      color: white;
-      padding: 80px 20px;
+      min-height: 100vh;
       text-align: center;
-      position: relative;
+      padding: 20px;
     }
 
-    .header h1 {
-      font-size: 3rem;
+    nav {
+      width: 100%;
+      background-color: #d5cbb9;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
       font-weight: bold;
-      margin: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      font-size: 1.1rem;
+      font-family: 'Playfair Display', serif;
     }
 
-    .header .frame {
-      border: 4px solid white;
-      padding: 40px;
-      display: inline-block;
+    nav a {
+      text-decoration: none;
+      color: #3a3a3a;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #000;
     }
 
     .branding {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .branding img {
-      height: 40px;
+      margin: 60px 0 40px;
     }
 
     .branding span {
-      font-size: 1.2rem;
-      font-weight: bold;
       background-color: #d5cbb9;
-      padding: 8px 14px;
-      border-radius: 6px;
       color: #3a3a3a;
-      font-style: italic;
+      padding: 15px 40px;
+      border-radius: 12px;
+      font-size: 2.5rem;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 2px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .main {
-      padding: 40px 20px;
-      text-align: center;
-      max-width: 800px;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .main p {
+    p {
       font-size: 1.2rem;
-      margin: 10px 0;
+      color: #555;
+      max-width: 600px;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: #888;
     }
 
     .cat {
@@ -78,17 +87,11 @@
       height: 150px;
       background: url('https://media.giphy.com/media/q1MeAPDDMb43K/giphy.gif') no-repeat center/contain;
       animation: floatCat 3s ease-in-out infinite;
-      margin: 30px auto;
-    }
-
-    @keyframes floatCat {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-      100% { transform: translateY(0); }
+      margin-top: 30px;
     }
 
     .redes {
-      margin: 20px 0;
+      margin-top: 20px;
     }
 
     .redes a {
@@ -97,6 +100,7 @@
       background-color: #e0d6c3;
       padding: 10px 20px;
       border-radius: 8px;
+      margin: 0 10px;
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -112,18 +116,18 @@
       height: 20px;
     }
 
-    footer {
-      font-size: 0.8rem;
-      color: #888;
-      margin: 40px 0;
+    @keyframes floatCat {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
     }
 
     @media (max-width: 768px) {
-      .header h1 {
-        font-size: 2rem;
+      h1 {
+        font-size: 1.5rem;
       }
 
-      .main p {
+      p {
         font-size: 1rem;
       }
 
@@ -132,39 +136,35 @@
         height: 100px;
       }
 
-      .branding {
+      nav {
         flex-direction: column;
+        gap: 10px;
       }
     }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#tienda">Tienda</a>
+    <a href="#sobremi">Sobre mí</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
   <div class="branding">
-    <img src="DAPSOUND LOGO TRANSPARENTE.png" alt="DapSound Logo">
     <span>DapSound</span>
   </div>
 
-  <div class="header">
-    <div class="frame">
-      <h1>Bienvenid@ a<br>DapSound</h1>
-    </div>
-  </div>
+  <h1>Estamos en mantenimiento</h1>
+  <p>Estamos trabajando para ofrecerte una mejor experiencia.<br>Volveremos pronto. ¡Gracias por tu paciencia!</p>
 
-  <div class="main">
-    <p>Actualmente estamos en mantenimiento, estamos trabajando para ofrecerte la mejor experiencia posible.</p>
-    <p>Volveremos pronto con muchas novedades.</p>
-    <p>¡Gracias por tu paciencia!</p>
-    <p>Si tienes dudas, puedes ponerte en contacto en: dani@dapsound.com</strong></p>
+  <div class="cat"></div>
 
-    <div class="cat"></div>
-
-    <div class="redes">
-      <a href="https://instagram.com/dap.sound" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-        Instagram
-      </a>
-    </div>
+  <div class="redes">
+    <a href="https://instagram.com/dap.sound" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      Síguenos en Instagram
+    </a>
   </div>
 
   <footer>&copy; 2025 DapSound. Todos los derechos reservados.</footer>
