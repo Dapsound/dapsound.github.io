@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DapSound | En Mantenimiento</title>
   <style>
     * {
@@ -11,45 +11,66 @@
 
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5efe3; /* Beige claro */
+      background-color: #f5efe3;
       color: #3a3a3a;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
       flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+
+    .header {
+      width: 100%;
+      background-color: #5e5a52;
+      color: white;
+      padding: 80px 20px;
       text-align: center;
-      padding: 20px;
+      position: relative;
     }
 
-    .title-box {
-      background-color: #d5cbb9; /* Marrón beige */
-      color: #3a3a3a;
-      padding: 10px 20px;
-      border-radius: 10px;
-      font-size: 1.5rem;
+    .header h1 {
+      font-size: 3rem;
       font-weight: bold;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 0;
     }
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
+    .header .frame {
+      border: 4px solid white;
+      padding: 40px;
+      display: inline-block;
     }
 
-    p {
+    .branding {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .branding img {
+      height: 40px;
+    }
+
+    .branding span {
       font-size: 1.2rem;
-      color: #555;
-      max-width: 600px;
+      font-weight: bold;
+      background-color: #d5cbb9;
+      padding: 8px 14px;
+      border-radius: 6px;
+      color: #3a3a3a;
+      font-style: italic;
     }
 
-    footer {
-      margin-top: 40px;
-      font-size: 0.8rem;
-      color: #888;
+    .main {
+      padding: 40px 20px;
+      text-align: center;
+      max-width: 800px;
+    }
+
+    .main p {
+      font-size: 1.2rem;
+      margin: 10px 0;
     }
 
     .cat {
@@ -57,11 +78,17 @@
       height: 150px;
       background: url('https://media.giphy.com/media/q1MeAPDDMb43K/giphy.gif') no-repeat center/contain;
       animation: floatCat 3s ease-in-out infinite;
-      margin-top: 30px;
+      margin: 30px auto;
+    }
+
+    @keyframes floatCat {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
     }
 
     .redes {
-      margin-top: 20px;
+      margin: 20px 0;
     }
 
     .redes a {
@@ -70,7 +97,6 @@
       background-color: #e0d6c3;
       padding: 10px 20px;
       border-radius: 8px;
-      margin: 0 10px;
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -86,18 +112,18 @@
       height: 20px;
     }
 
-    @keyframes floatCat {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-      100% { transform: translateY(0); }
+    footer {
+      font-size: 0.8rem;
+      color: #888;
+      margin: 40px 0;
     }
 
     @media (max-width: 768px) {
-      h1 {
-        font-size: 1.5rem;
+      .header h1 {
+        font-size: 2rem;
       }
 
-      p {
+      .main p {
         font-size: 1rem;
       }
 
@@ -105,21 +131,40 @@
         width: 100px;
         height: 100px;
       }
+
+      .branding {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="title-box">DapSound</div>
-  <h1>Estamos en mantenimiento</h1>
-  <p>Estamos trabajando para ofrecerte una mejor experiencia.<br>Volveremos pronto. ¡Gracias por tu paciencia!</p>
 
-  <div class="cat"></div>
+  <div class="branding">
+    <img src="DAPSOUND LOGO TRANSPARENTE.png" alt="DapSound Logo">
+    <span>DapSound</span>
+  </div>
 
-  <div class="redes">
-    <a href="https://instagram.com/dap.sound" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-      Síguenos en Instagram
-    </a>
+  <div class="header">
+    <div class="frame">
+      <h1>Bienvenido a<br>DapSound</h1>
+    </div>
+  </div>
+
+  <div class="main">
+    <p>Actualmente estamos en mantenimiento, estamos trabajando para ofrecerte la mejor experiencia posible.</p>
+    <p>Volveremos pronto con muchas novedades.</p>
+    <p>¡Gracias por tu paciencia!</p>
+    <p>Si tienes dudas, puedes ponerte en contacto en: <strong><a href="mailto:dani@dapsound.com">dani@dapsound.com</a></strong></p>
+
+    <div class="cat"></div>
+
+    <div class="redes">
+      <a href="https://instagram.com/dap.sound" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        Instagram
+      </a>
+    </div>
   </div>
 
   <footer>&copy; 2025 DapSound. Todos los derechos reservados.</footer>
