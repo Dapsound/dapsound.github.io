@@ -18,28 +18,6 @@
       flex-direction: column;
       text-align: center;
     }
-
-    .logo {
-      width: 100px;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      color: #555;
-    }
-
-    footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.8rem;
-      color: #888;
-    }
   </style>
 </head>
 <body>
