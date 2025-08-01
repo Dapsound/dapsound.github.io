@@ -29,7 +29,7 @@
     }
     .filters {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 10px;
     }
     label {
@@ -40,7 +40,7 @@
     }
     input, select {
       margin-top: 4px;
-      padding: 3px 5px;
+      padding: 4px 6px;
       border-radius: 8px;
       border: 1px solid #ccc;
       background-color: #fdf9f2;
@@ -110,43 +110,27 @@
     .add-to-cart:hover {
       background-color: #a98f76;
     }
-    .cart-message {
-      max-width: 600px;
-      margin: 40px auto;
-      text-align: center;
-      font-size: 1.1rem;
-      color: #8b7d6b;
-      background-color: #fff3e0;
-      padding: 20px;
-      border-radius: 12px;
-    }
-    .volver-inicio {
-      display: block;
-      width: fit-content;
-      margin: 30px auto 0;
-      background-color: #e0d6c3;
-      color: #3a3a3a;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
     #cart-summary {
       max-width: 600px;
-      margin: 20px auto;
+      margin: 40px auto;
       padding: 20px;
       border-radius: 12px;
       background-color: #fdf6ec;
       text-align: center;
     }
-    #checkout {
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #a58e75;
-      color: white;
+    #cart-summary ul {
+      list-style: none;
+      padding: 0;
+    }
+    #cart-summary li {
+      margin: 10px 0;
+    }
+    .remove-btn {
+      margin-left: 10px;
+      background: none;
       border: none;
-      border-radius: 8px;
-      font-size: 0.9rem;
+      color: red;
+      font-weight: bold;
       cursor: pointer;
     }
     #promo-code {
@@ -160,101 +144,122 @@
       border-radius: 8px;
       border: 1px solid #ccc;
     }
-    .remove-btn {
-      margin-left: 10px;
-      background: none;
+    #checkout {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #a58e75;
+      color: white;
       border: none;
-      color: red;
-      font-weight: bold;
+      border-radius: 8px;
+      font-size: 0.9rem;
       cursor: pointer;
+    }
+    .volver-inicio {
+      display: block;
+      width: fit-content;
+      margin: 30px auto 0;
+      background-color: #e0d6c3;
+      color: #3a3a3a;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <!-- BODY CONTENT OMITTED FOR BREVITY, UNCHANGED -->
-</body>
-</html>
+  <h1>Beats</h1>
+  
+    <p style="max-width: 800px; margin: 0 auto 30px; text-align: center; font-size: 1rem; line-height: 1.6;">
+    Nuestros beats son exclusivos y de alta calidad, pensados para elevar cualquier proyecto musical.  
+    Ofrecemos varias opciones de compra según tus necesidades: licencias estándar, exclusivas y personalizadas.  
+    Si estás buscando un sonido único o una instrumental hecha a medida, no dudes en <a href="contacto.html" style="color: #a58e75; font-weight: bold;">contactarnos</a>.
+  </p>
 
-  <div id="beats-list" class="beats-container"></div>
+  <form>
+    <div class="filters">
+      <label>BPM desde<input type="number"></label>
+      <label>BPM hasta<input type="number"></label>
+      <label>Precio desde (€)<input type="number"></label>
+      <label>Precio hasta (€)<input type="number"></label>
+      <label>Key<select><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>A</option><option>B</option></select></label>
+      <label>Escala<select><option>Mayor</option><option>Menor</option><option>Dórica</option><option>Frigia</option><option>Lidia</option><option>Mixolidia</option><option>Locria</option></select></label>
+    </div>
+    <div class="filters-submit">
+      <button type="button">Buscar</button>
+    </div>
+  </form>
 
-  <div id="cart-summary">
-    <p><strong>Beats en la cesta:</strong></p>
-    <ul id="cart-items" style="list-style: none; padding: 0;"></ul>
-    <button id="checkout">Comprar</button>
+  <div class="beats-container">
+    <div class="beat">
+      <h3>Beat 1</h3>
+      <div class="custom-player">
+        <audio controls src="#"></audio>
+      </div>
+      <button class="add-to-cart" onclick="addToCart('Beat 1')">Agregar a la cesta</button>
+    </div>
+    <div class="beat">
+      <h3>Beat 2</h3>
+      <div class="custom-player">
+        <audio controls src="#"></audio>
+      </div>
+      <button class="add-to-cart" onclick="addToCart('Beat 2')">Agregar a la cesta</button>
+    </div>
   </div>
 
-  <div class="cart-message" id="cart-alert" style="display:none">
-    La pasarela de pago no está disponible en este momento. Estará pronto habilitada. ¡Perdonen las molestias!
+  <div id="cart-summary">
+    <h2>Tu cesta</h2>
+    <ul id="cart-items"></ul>
+    <p id="empty-msg">Actualmente no hay beats añadidos. Estamos en mantenimiento. Disculpa las molestias.</p>
+    <div id="promo-code">
+      <input id="promoInput" type="text" placeholder="Código promocional">
+      <button onclick="applyPromoCode(event)">Aplicar</button>
+    </div>
+    <button id="checkout" onclick="checkout(event)">Pagar</button>
   </div>
 
   <a class="volver-inicio" href="index.html">Volver al inicio</a>
 
   <script>
-    const beats = [
-      { name: 'No Disponible', genre: 'Trap', bpm: 140, audio: 'audios/beat1.mp3' },
-      { name: 'No disponible', genre: 'Drill', bpm: 145, audio: 'audios/beat2.mp3' },
-
-    ];
-
     const cart = [];
-
-    function renderBeats(beatsToRender) {
-      const container = document.getElementById('beats-list');
-      container.innerHTML = '';
-      beatsToRender.forEach(b => {
-        const beatCard = document.createElement('div');
-        beatCard.className = 'beat';
-        beatCard.innerHTML = `
-          <h3>${b.name}</h3>
-          <div class="custom-player">
-            <audio controls src="${b.audio}"></audio>
-          </div>
-          <button class="add-to-cart">Agregar a la cesta</button>
-        `;
-        beatCard.querySelector('.add-to-cart').addEventListener('click', () => addToCart(b.name));
-        container.appendChild(beatCard);
-      });
-    }
-
-    function addToCart(name) {
-      cart.push(name);
+    function addToCart(item) {
+      cart.push(item);
       updateCart();
     }
-
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      updateCart();
+    }
     function updateCart() {
-      const cartList = document.getElementById('cart-items');
-      cartList.innerHTML = '';
-      cart.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `🎵 ${item}`;
-        cartList.appendChild(li);
-      });
+      const cartItems = document.getElementById('cart-items');
+      const emptyMsg = document.getElementById('empty-msg');
+      cartItems.innerHTML = '';
+      if (cart.length === 0) {
+        emptyMsg.style.display = 'block';
+      } else {
+        emptyMsg.style.display = 'none';
+        cart.forEach((item, index) => {
+          const li = document.createElement('li');
+          li.innerHTML = `${item} <button class='remove-btn' onclick='removeFromCart(${index})'>X</button>`;
+          cartItems.appendChild(li);
+        });
+      }
     }
 
-    document.getElementById('filter-form').addEventListener('submit', e => {
-      e.preventDefault();
-      const form = new FormData(e.target);
-      let filtered = [...beats];
+    function checkout(event) {
+      event.preventDefault();
+      alert('La opción de pago aún no está disponible. Vuelve pronto.');
+    }
 
-      const bpmMin = parseInt(form.get('bpmMin')) || 0;
-      const bpmMax = parseInt(form.get('bpmMax')) || 999;
-      const genre = form.get('genre');
-
-      filtered = filtered.filter(b =>
-        b.bpm >= bpmMin && b.bpm <= bpmMax &&
-        (!genre || b.genre === genre)
-      );
-
-      renderBeats(filtered);
-    });
-
-    document.getElementById('checkout').addEventListener('click', () => {
-      const alertBox = document.getElementById('cart-alert');
-      alertBox.style.display = 'block';
-      alertBox.scrollIntoView({ behavior: 'smooth' });
-    });
-
-    renderBeats(beats);
+    function applyPromoCode(event) {
+      event.preventDefault();
+      const code = document.getElementById('promoInput').value.trim();
+      if (code.length !== 8) {
+        alert('El código debe tener exactamente 8 caracteres.');
+      } else {
+        alert('Este código promocional no es válido o aún no está disponible.');
+      }
+    }
   </script>
 </body>
 </html>
