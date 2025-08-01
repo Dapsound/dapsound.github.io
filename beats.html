@@ -35,9 +35,16 @@
     .beat h3 {
       margin: 10px 0;
     }
-    .beat audio {
-      width: 100%;
+    .custom-player {
+      background-color: #f0e9da;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
       margin: 10px 0;
+    }
+    .custom-player audio {
+      width: 100%;
+      outline: none;
     }
     .beat button {
       background-color: #ccc;
@@ -46,6 +53,7 @@
       padding: 10px 20px;
       border-radius: 6px;
       cursor: not-allowed;
+      margin-top: 10px;
     }
     .cart {
       max-width: 500px;
@@ -65,7 +73,7 @@
     }
     .payment {
       max-width: 500px;
-      margin: 0 auto;
+      margin: 0 auto 20px;
       padding: 20px;
       background-color: #fffaf0;
       border-radius: 12px;
@@ -85,6 +93,17 @@
     .payment button:hover {
       background-color: #cbbca6;
     }
+    .volver-inicio {
+      display: block;
+      width: fit-content;
+      margin: 30px auto 0;
+      background-color: #e0d6c3;
+      color: #3a3a3a;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -99,15 +118,18 @@
   <div class="beats-container">
     <div class="beat">
       <h3>Beat 1</h3>
-      <audio controls src="#"></audio>
+      <div class="custom-player">
+        <audio controls src="#"></audio>
+      </div>
       <button disabled>No disponible</button>
     </div>
     <div class="beat">
       <h3>Beat 2</h3>
-      <audio controls src="#"></audio>
+      <div class="custom-player">
+        <audio controls src="#"></audio>
+      </div>
       <button disabled>No disponible</button>
     </div>
-    <!-- Puedes añadir más beats aquí en el futuro -->
   </div>
 
   <div class="payment">
@@ -115,6 +137,8 @@
     <p>Elige tus beats y procede al pago cuando estén disponibles.</p>
     <button disabled>Ir al pago</button>
   </div>
+
+  <a class="volver-inicio" href="index.html">Volver al inicio</a>
 
 </body>
 </html>
