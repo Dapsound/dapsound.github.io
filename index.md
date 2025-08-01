@@ -54,7 +54,7 @@
     <p>Actualmente estamos en mantenimiento, estamos trabajando para ofrecerte la mejor experiencia posible.</p>
     <p>Volveremos pronto con muchas novedades.</p>
     <p>¡Gracias por tu paciencia!</p>
-    <p>Si tienes dudas, puedes ponerte en contacto en: dani@dapsound.com</p>
+    <p>Si tienes dudas, puedes ponerte en contacto en: dani@dapsound.com</a>
     <p><em>Equipo DapSound</em></p>
   </div>
 
