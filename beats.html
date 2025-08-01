@@ -1,47 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Beats | DapSound</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <style>
     body {
       background-color: #f5efe3;
-      color: #3a3a3a;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      min-height: 100vh;
+      color: #3a3a3a;
       margin: 0;
+      padding: 40px 20px;
     }
-
     h1 {
-      font-size: 2.5rem;
+      text-align: center;
       font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
     }
-
-    p {
-      font-size: 1.2rem;
-      color: #666;
+    .beats-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 40px auto;
     }
-
-    a {
-      margin-top: 30px;
-      display: inline-block;
+    .beat {
+      background-color: #fffaf0;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .beat h3 {
+      margin: 10px 0;
+    }
+    .beat audio {
+      width: 100%;
+      margin: 10px 0;
+    }
+    .beat button {
+      background-color: #ccc;
+      color: #777;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: not-allowed;
+    }
+    .cart {
+      max-width: 500px;
+      margin: 0 auto 40px;
+      padding: 20px;
+      background-color: #fffaf0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .cart h2 {
+      margin-top: 0;
+    }
+    .cart-icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .payment {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fffaf0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .payment button {
       background-color: #d5cbb9;
       color: #3a3a3a;
-      padding: 10px 20px;
+      border: none;
+      padding: 12px 24px;
       border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .payment button:hover {
+      background-color: #cbbca6;
     }
   </style>
 </head>
 <body>
   <h1>Beats</h1>
-  <p>Actualmente no hay beats disponibles.<br>Vuelve más adelante para descubrir nuestras novedades.</p>
-  <a href="index.html">Volver al inicio</a>
+
+  <div class="cart">
+    <div class="cart-icon">🛒</div>
+    <h2>Tu carrito</h2>
+    <p>Actualmente no hay beats disponibles para añadir al carrito.</p>
+  </div>
+
+  <div class="beats-container">
+    <div class="beat">
+      <h3>Beat 1</h3>
+      <audio controls src="#"></audio>
+      <button disabled>No disponible</button>
+    </div>
+    <div class="beat">
+      <h3>Beat 2</h3>
+      <audio controls src="#"></audio>
+      <button disabled>No disponible</button>
+    </div>
+    <!-- Puedes añadir más beats aquí en el futuro -->
+  </div>
+
+  <div class="payment">
+    <h2>Pago</h2>
+    <p>Elige tus beats y procede al pago cuando estén disponibles.</p>
+    <button disabled>Ir al pago</button>
+  </div>
+
 </body>
 </html>
