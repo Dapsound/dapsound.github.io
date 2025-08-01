@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DapSound | En Mantenimiento</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <style>
     * {
       box-sizing: border-box;
@@ -13,107 +13,78 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f5efe3;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #3a3a3a;
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-height: 100vh;
       text-align: center;
+      min-height: 100vh;
       padding: 20px;
     }
 
     nav {
       width: 100%;
-      background-color: #d5cbb9;
-      padding: 20px;
+      background-color: #e7dfd1;
       display: flex;
       justify-content: center;
       gap: 40px;
-      font-weight: bold;
+      padding: 15px 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
       position: sticky;
       top: 0;
       z-index: 100;
-      font-size: 1.1rem;
-      font-family: 'Playfair Display', serif;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
     }
 
     nav a {
-      text-decoration: none;
       color: #3a3a3a;
-      transition: color 0.3s;
+      text-decoration: none;
+      padding: 6px 12px;
+      transition: all 0.3s ease;
+      border-bottom: 2px solid transparent;
     }
 
     nav a:hover {
-      color: #000;
+      color: #a58e75;
+      border-bottom: 2px solid #a58e75;
     }
 
     .branding {
-      margin: 60px 0 40px;
+      margin: 80px 0 40px;
     }
 
     .branding span {
-      background-color: #d5cbb9;
-      color: #3a3a3a;
-      padding: 15px 40px;
-      border-radius: 12px;
-      font-size: 2.5rem;
       font-family: 'Playfair Display', serif;
-      letter-spacing: 2px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-size: 3rem;
+      letter-spacing: 3px;
+      padding: 20px 50px;
+      border-radius: 16px;
+      background: linear-gradient(to right, #e9dfc9, #d5c3a5);
+      color: #3a2e1f;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
     }
 
     h1 {
       font-size: 2rem;
-      margin-bottom: 10px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-bottom: 20px;
     }
 
     p {
-      font-size: 1.2rem;
-      color: #555;
-      max-width: 600px;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 0.8rem;
-      color: #888;
+      font-size: 1.15rem;
+      color: #5a5142;
+      max-width: 700px;
+      line-height: 1.8;
     }
 
     .cat {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
       background: url('https://media.giphy.com/media/q1MeAPDDMb43K/giphy.gif') no-repeat center/contain;
       animation: floatCat 3s ease-in-out infinite;
-      margin-top: 30px;
-    }
-
-    .redes {
-      margin-top: 20px;
-    }
-
-    .redes a {
-      text-decoration: none;
-      color: #3a3a3a;
-      background-color: #e0d6c3;
-      padding: 10px 20px;
-      border-radius: 8px;
-      margin: 0 10px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: background-color 0.3s;
-    }
-
-    .redes a:hover {
-      background-color: #d5cbb9;
-    }
-
-    .redes img {
-      width: 20px;
-      height: 20px;
+      margin: 40px auto;
     }
 
     @keyframes floatCat {
@@ -122,7 +93,49 @@
       100% { transform: translateY(0); }
     }
 
+    .redes {
+      margin-top: 30px;
+    }
+
+    .redes a {
+      text-decoration: none;
+      color: #3a3a3a;
+      background-color: #e0d6c3;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .redes a:hover {
+      background-color: #d5cbb9;
+    }
+
+    .redes img {
+      width: 22px;
+      height: 22px;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
     @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .branding span {
+        font-size: 2.2rem;
+        padding: 15px 30px;
+      }
+
       h1 {
         font-size: 1.5rem;
       }
@@ -135,20 +148,16 @@
         width: 100px;
         height: 100px;
       }
-
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
     }
   </style>
 </head>
 <body>
+
   <nav>
     <a href="#inicio">Inicio</a>
     <a href="Sobre Nosotros.html">Sobre Nosotros</a>
     <a href="beats.html">Beats Shop</a>
-   <a href="contacto.html">Contacto</a>
+    <a href="contacto.html">Contacto</a>
   </nav>
 
   <div class="branding">
@@ -156,7 +165,7 @@
   </div>
 
   <h1>Estamos en mantenimiento</h1>
-  <p>Estamos trabajando para ofrecerte una mejor experiencia.<br>Volveremos pronto. ¡Gracias por tu paciencia!</p>
+  <p>Estamos trabajando para ofrecerte una experiencia sonora única y de primer nivel.<br>Volveremos muy pronto. Gracias por tu paciencia.</p>
 
   <div class="cat"></div>
 
