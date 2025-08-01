@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beats | DapSound</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
       background-color: #f5efe3;
@@ -13,160 +13,131 @@
       margin: 0;
       padding: 40px 20px;
     }
+
     h1 {
       text-align: center;
       font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
+      font-size: 3rem;
+      margin-bottom: 40px;
     }
 
-    /* Estilos del nuevo apartado de filtros visuales */
-    .filtros-contenedor {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1000px;
-      margin: 20px auto;
-      padding: 10px 20px;
-      background-color: #e8e1d6;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    form {
+      max-width: 1200px;
+      margin: 0 auto 40px;
+      background-color: #fffaf0;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
-    .ordenar label {
-      font-weight: bold;
-      margin-right: 10px;
+    .filters {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
     }
 
-    .ordenar select {
-      padding: 6px 12px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      background-color: #fff;
-      font-size: 1rem;
-    }
-
-    .vista-opciones button {
-      background-color: #d6cabb;
-      border: none;
-      padding: 8px 12px;
-      margin-left: 8px;
-      font-size: 1.2rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
-
-    .vista-opciones button:hover {
-      background-color: #cfc2b1;
-    }
-
-    .filter-form {
-      max-width: 1000px;
-      margin: 0 auto 30px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .filter-form label {
+    label {
       display: flex;
       flex-direction: column;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 0.8rem;
     }
-    .filter-form select, .filter-form input {
-      padding: 6px 10px;
-      border-radius: 6px;
+
+    input, select {
+      margin-top: 4px;
+      padding: 4px 6px;
+      border-radius: 8px;
       border: 1px solid #ccc;
+      background-color: #fdf9f2;
+      font-size: 0.8rem;
     }
+
+    .filters-submit {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .filters-submit button {
+      padding: 8px 20px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      background-color: #d1bfa3;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .filters-submit button:hover {
+      background-color: #bda98e;
+    }
+
     .beats-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+      gap: 30px;
       max-width: 1200px;
-      margin: 40px auto;
+      margin: 0 auto 50px;
     }
+
     .beat {
       background-color: #fffaf0;
-      padding: 20px;
-      border-radius: 12px;
+      padding: 25px;
+      border-radius: 16px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.12);
       text-align: center;
       transition: transform 0.3s ease;
     }
+
     .beat:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
     }
+
     .beat h3 {
       margin: 10px 0;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
+      font-weight: 600;
     }
+
     .custom-player {
-      position: relative;
       background-color: #eae1d3;
       border-radius: 10px;
       padding: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
       margin: 15px 0;
     }
-    .custom-player audio {
+
+    audio {
       width: 100%;
-      height: 40px;
     }
-    .custom-player::before {
-      content: '🎧';
-      font-size: 1.5rem;
-      margin-right: 10px;
-    }
-    .beat button {
-      background-color: #ccc;
-      color: #777;
-      border: none;
+
+    .add-to-cart {
+      margin-top: 10px;
       padding: 10px 20px;
-      border-radius: 6px;
-      cursor: not-allowed;
-      margin-top: 10px;
-    }
-    .cart {
-      max-width: 500px;
-      margin: 0 auto 40px;
-      padding: 20px;
-      background-color: #fffaf0;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .cart h2 {
-      margin-top: 0;
-    }
-    .cart-icon {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-    .payment {
-      max-width: 500px;
-      margin: 0 auto 20px;
-      padding: 20px;
-      background-color: #fffaf0;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .payment button {
-      background-color: #d5cbb9;
-      color: #3a3a3a;
+      background-color: #c2aa8e;
+      color: white;
       border: none;
-      padding: 12px 24px;
       border-radius: 8px;
-      font-size: 1rem;
       cursor: pointer;
-      margin-top: 10px;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease;
     }
-    .payment button:hover {
-      background-color: #cbbca6;
+
+    .add-to-cart:hover {
+      background-color: #a98f76;
     }
+
+    .cart-message {
+      max-width: 600px;
+      margin: 40px auto;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #8b7d6b;
+      background-color: #fff3e0;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
     .volver-inicio {
       display: block;
       width: fit-content;
@@ -178,108 +149,138 @@
       text-decoration: none;
       font-weight: bold;
     }
+
+    #cart-summary {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      background-color: #fdf6ec;
+      text-align: center;
+    }
+
+    #checkout {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #a58e75;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
-  
   <h1>Beats</h1>
 
-  <!-- NUEVO FILTRO VISUAL -->
-  <div class="filtros-contenedor">
-    <div class="ordenar">
-      <label for="ordenarPor">Ordenar por:</label>
-      <select id="ordenarPor" name="ordenarPor">
-        <option value="relevancia">Relevancia</option>
-        <option value="bpm">BPM</option>
-        <option value="key">Tonalidad</option>
-        <option value="genero">Género</option>
-      </select>
-    </div>
+  <form id="filter-form">
+    <div class="filters">
+      <label>BPM (de x - y)
+        <div style="display: flex; gap: 6px;">
+          <input type="number" name="bpmMin" placeholder="Ej. 80BPM">
+          <input type="number" name="bpmMax" placeholder="Ej. 150BPM">
+        </div>
+      </label>
 
-    <div class="vista-opciones">
-      <button title="Vista de Lista">☰</button>
-      <button title="Vista de Cuadrícula">▦</button>
+      <label>Género
+        <select name="genre">
+          <option value="">Todos</option>
+          <option value="Trap">Trap</option>
+          <option value="Reggaeton">Reggaeton</option>
+          <option value="Drill">Drill</option>
+          <option value="Hip Hop">Hip Hop</option>
+          <option value="Lo-Fi">Lo-Fi</option>
+          <option value="Dembow">Dembow</option>
+          <option value="Dancehall">Dancehall</option>
+        </select>
+      </label>
     </div>
-  </div>
-
-  <!-- FORMULARIO DE FILTROS -->
-  <form class="filter-form">
-    <label>BPM
-      <input type="number" placeholder="Ej. 120" />
-    </label>
-    <label>Key
-      <select>
-        <option value="">Todas</option>
-        <option value="C">C</option>
-        <option value="D">D</option>
-        <option value="E">E</option>
-        <option value="F">F</option>
-        <option value="G">G</option>
-        <option value="A">A</option>
-        <option value="B">B</option>
-      </select>
-    </label>
-    <label>Escala
-      <select>
-        <option value="">Todas</option>
-        <option>Mayor</option>
-        <option>Menor</option>
-        <option>Dórica</option>
-        <option>Frigia</option>
-        <option>Lidia</option>
-        <option>Mixolidia</option>
-        <option>Locria</option>
-      </select>
-    </label>
-    <label>Género
-      <select>
-        <option value="">Todos</option>
-        <option>Trap</option>
-        <option>Reggaeton</option>
-        <option>Dancehall</option>
-        <option>Pop</option>
-        <option>R&B</option>
-        <option>Drill</option>
-        <option>Hip Hop</option>
-        <option>Lo-Fi</option>
-        <option>Rap</option>
-      </select>
-    </label>
-    <label>Precio máx (€)
-      <input type="number" placeholder="Ej. 50" />
-    </label>
+    <div class="filters-submit">
+      <button type="submit">Buscar</button>
+    </div>
   </form>
 
-  <div class="cart">
-    <div class="cart-icon">🛒</div>
-    <h2>Tu carrito</h2>
-    <p>Actualmente no hay beats disponibles para añadir al carrito.</p>
+  <div id="beats-list" class="beats-container"></div>
+
+  <div id="cart-summary">
+    <p><strong>Beats en la cesta:</strong></p>
+    <ul id="cart-items" style="list-style: none; padding: 0;"></ul>
+    <button id="checkout">Comprar</button>
   </div>
 
-  <div class="beats-container">
-    <div class="beat">
-      <h3>Beat 1</h3>
-      <div class="custom-player">
-        <audio controls src="#"></audio>
-      </div>
-      <button disabled>No disponible</button>
-    </div>
-    <div class="beat">
-      <h3>Beat 2</h3>
-      <div class="custom-player">
-        <audio controls src="#"></audio>
-      </div>
-      <button disabled>No disponible</button>
-    </div>
-  </div>
-
-  <div class="payment">
-    <h2>Pago</h2>
-    <p>Elige tus beats y procede al pago cuando estén disponibles.</p>
-    <button disabled>Ir al pago</button>
+  <div class="cart-message" id="cart-alert" style="display:none">
+    La pasarela de pago no está disponible en este momento. Estará pronto habilitada. ¡Perdonen las molestias!
   </div>
 
   <a class="volver-inicio" href="index.html">Volver al inicio</a>
 
+  <script>
+    const beats = [
+      { name: 'Beat No Disponible', genre: 'Trap', bpm: 100, audio: 'audios/beat1.mp3' },
+      { name: 'Beat No disponible', genre: 'Drill', bpm: 100, audio: 'audios/beat2.mp3' },
++
+    ];
+
+    const cart = [];
+
+    function renderBeats(beatsToRender) {
+      const container = document.getElementById('beats-list');
+      container.innerHTML = '';
+      beatsToRender.forEach(b => {
+        const beatCard = document.createElement('div');
+        beatCard.className = 'beat';
+        beatCard.innerHTML = `
+          <h3>${b.name}</h3>
+          <div class="custom-player">
+            <audio controls src="${b.audio}"></audio>
+          </div>
+          <button class="add-to-cart">Agregar a la cesta</button>
+        `;
+        beatCard.querySelector('.add-to-cart').addEventListener('click', () => addToCart(b.name));
+        container.appendChild(beatCard);
+      });
+    }
+
+    function addToCart(name) {
+      cart.push(name);
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartList = document.getElementById('cart-items');
+      cartList.innerHTML = '';
+      cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `🎵 ${item}`;
+        cartList.appendChild(li);
+      });
+    }
+
+    document.getElementById('filter-form').addEventListener('submit', e => {
+      e.preventDefault();
+      const form = new FormData(e.target);
+      let filtered = [...beats];
+
+      const bpmMin = parseInt(form.get('bpmMin')) || 0;
+      const bpmMax = parseInt(form.get('bpmMax')) || 999;
+      const genre = form.get('genre');
+
+      filtered = filtered.filter(b =>
+        b.bpm >= bpmMin && b.bpm <= bpmMax &&
+        (!genre || b.genre === genre)
+      );
+
+      renderBeats(filtered);
+    });
+
+    document.getElementById('checkout').addEventListener('click', () => {
+      const alertBox = document.getElementById('cart-alert');
+      alertBox.style.display = 'block';
+      alertBox.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    renderBeats(beats);
+  </script>
 </body>
 </html>
