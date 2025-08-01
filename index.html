@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -34,11 +35,27 @@
       font-size: 0.8rem;
       color: #888;
     }
+
+    .cat {
+      width: 150px;
+      height: 150px;
+      background: url('https://media.giphy.com/media/q1MeAPDDMb43K/giphy.gif') no-repeat center/contain;
+      animation: floatCat 3s ease-in-out infinite;
+      position: absolute;
+      bottom: 100px;
+    }
+
+    @keyframes floatCat {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
   <h1>Estamos en mantenimiento</h1>
   <p>Estamos trabajando para ofrecerte una mejor experiencia.<br>Volveremos pronto. ¡Gracias por tu paciencia!</p>
+  <div class="cat"></div>
   <footer>&copy; 2025 DapSound. Todos los derechos reservados.</footer>
 </body>
 </html>
