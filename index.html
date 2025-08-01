@@ -5,18 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DapSound | En Mantenimiento</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5efe3; /* beige claro */
+      background-color: #f5efe3;
       color: #3a3a3a;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       flex-direction: column;
       text-align: center;
+      padding: 20px;
+    }
+
+    .title-box {
+      background-color: #d5cbb9;
+      color: #3a3a3a;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     h1 {
@@ -27,11 +43,11 @@
     p {
       font-size: 1.2rem;
       color: #555;
+      max-width: 600px;
     }
 
     footer {
-      position: absolute;
-      bottom: 20px;
+      margin-top: 40px;
       font-size: 0.8rem;
       color: #888;
     }
@@ -41,8 +57,33 @@
       height: 150px;
       background: url('https://media.giphy.com/media/q1MeAPDDMb43K/giphy.gif') no-repeat center/contain;
       animation: floatCat 3s ease-in-out infinite;
-      position: absolute;
-      bottom: 100px;
+      margin-top: 30px;
+    }
+
+    .redes {
+      margin-top: 20px;
+    }
+
+    .redes a {
+      text-decoration: none;
+      color: #3a3a3a;
+      background-color: #e0d6c3;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin: 0 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .redes a:hover {
+      background-color: #d5cbb9;
+    }
+
+    .redes img {
+      width: 20px;
+      height: 20px;
     }
 
     @keyframes floatCat {
@@ -50,12 +91,36 @@
       50% { transform: translateY(-15px); }
       100% { transform: translateY(0); }
     }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .cat {
+        width: 100px;
+        height: 100px;
+      }
+    }
   </style>
 </head>
 <body>
+  <div class="title-box">DapSound</div>
   <h1>Estamos en mantenimiento</h1>
   <p>Estamos trabajando para ofrecerte una mejor experiencia.<br>Volveremos pronto. ¡Gracias por tu paciencia!</p>
   <div class="cat"></div>
+
+  <div class="redes">
+    <a href="https://instagram.com/dap.sound" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      Síguenos en Instagram
+    </a>
+  </div>
+
   <footer>&copy; 2025 DapSound. Todos los derechos reservados.</footer>
 </body>
 </html>
