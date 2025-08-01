@@ -1,109 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DapSound | Beats en venta</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #fdfaf6;
-      color: #2d2b2a;
-    }
-    header {
-      background-color: #e8dfd1;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-      letter-spacing: 1px;
-    }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .intro {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .intro p {
-      font-size: 1.1em;
-      color: #4a4a4a;
-    }
-    .beats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .beat {
-      background: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-    .beat h3 {
-      margin-top: 0;
-    }
-    .buy-button {
-      display: inline-block;
-      background-color: #c6b89e;
-      color: #fff;
-      padding: 10px 15px;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background-color 0.2s;
-    }
-    .buy-button:hover {
-      background-color: #b1a487;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9em;
-      padding: 20px;
-      color: #888;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DapSound</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #605e56;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .banner {
+            background-color: #605e56;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .banner h2 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .contenido {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: center;
+            padding: 0 20px;
+            font-size: 1.2em;
+            line-height: 1.6em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        a {
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>DapSound</h1>
-    <p>Instrumentales de alta calidad para tus proyectos</p>
-  </header>
+    <header>
+        <h1>DAPSOUND</h1>
+    </header>
 
-  <section class="intro">
-    <p>Escucha y compra beats directamente desde esta página. Próximamente añadiremos más funcionalidades.</p>
-  </section>
-
-  <section class="beats">
-    <div class="beat">
-      <h3>Ejemplo Beat #1</h3>
-      <audio controls style="width: 100%;">
-        <source src="https://www.example.com/beat1.mp3" type="audio/mp3" />
-        Tu navegador no soporta audio HTML.
-      </audio>
-      <br /><br />
-      <a class="buy-button" href="https://www.paypal.com" target="_blank">Comprar</a>
+    <div class="banner">
+        <h2>Bienvenido a DapSound</h2>
     </div>
 
-    <div class="beat">
-      <h3>Ejemplo Beat #2</h3>
-      <audio controls style="width: 100%;">
-        <source src="https://www.example.com/beat2.mp3" type="audio/mp3" />
-        Tu navegador no soporta audio HTML.
-      </audio>
-      <br /><br />
-      <a class="buy-button" href="https://www.paypal.com" target="_blank">Comprar</a>
+    <div class="contenido">
+        <p>Actualmente estamos en mantenimiento, estamos trabajando para ofrecerte la mejor experiencia posible.</p>
+        <p>Volveremos pronto con muchas novedades.</p>
+        <p>¡Gracias por tu paciencia!</p>
+        <p>Si tienes dudas, puedes ponerte en contacto en: <a href="mailto:dani@dapsound.com">dani@dapsound.com</a></p>
+        <p><em>Equipo DapSound</em></p>
     </div>
-  </section>
 
-  <footer>
-    © 2025 DapSound — Todos los derechos reservados | <a href="mailto:contacto@dapsound.com">Contacto</a>
-  </footer>
+    <footer>
+        &copy; 2025 DapSound. Todos los derechos reservados.
+    </footer>
 </body>
 </html>
