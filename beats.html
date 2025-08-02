@@ -3,23 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <title data-cms="text">Beats | DapSound</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
+      margin: 0;
+      padding: 0;
       background-color: #f5efe3;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #3a3a3a;
-      margin: 0;
-      padding: 40px 20px;
+      line-height: 1.6;
+      padding-top: 20px;
     }
+
+    .nav-wrapper {
+      background-color: #f5efe3;
+      padding: 20px 0;
+    }
+
+    nav {
+      max-width: 1400px;
+      margin: 0 auto;
+      background-color: #e7dfd1;
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      padding: 25px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: bold;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+    }
+
+    nav a {
+      color: #3a3a3a;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #3a2e1f;
+      border-bottom: 2px solid #3a2e1f;
+    }
+
     h1 {
       text-align: center;
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
       margin-bottom: 40px;
     }
+
     form {
       max-width: 1200px;
       margin: 0 auto 40px;
@@ -169,9 +210,18 @@
   </style>
 </head>
 <body>
+  <div class="nav-wrapper">
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Sobre Nosotros</a>
+      <a href="beats.html" class="active">Beats Shop</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+
   <h1>Beats</h1>
   
-    <p style="max-width: 800px; margin: 0 auto 30px; text-align: center; font-size: 1rem; line-height: 1.6;">
+  <p style="max-width: 800px; margin: 0 auto 30px; text-align: center; font-size: 1rem; line-height: 1.6;">
     Nuestros beats son exclusivos y de alta calidad, pensados para elevar cualquier proyecto musical.  
     Ofrecemos varias opciones de compra según tus necesidades: licencias estándar, exclusivas y personalizadas.  
     Si estás buscando un sonido único o una instrumental hecha a medida, no dudes en <a href="contacto.html" style="color: #a58e75; font-weight: bold;">contactarnos</a>.
