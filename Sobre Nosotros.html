@@ -2,19 +2,65 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <title>Sobre Nosotros | DapSound</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
+      margin: 0;
+      padding: 0;
       background-color: #f5efe3;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #3a3a3a;
-      margin: 0;
       padding-top: 70px;
       line-height: 1.6;
+    }
+
+    nav.navbar {
+      width: 100%;
+      background-color: #e7dfd1;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    nav.navbar a {
+      color: #3a3a3a;
+      text-decoration: none;
+      padding: 6px 12px;
+      transition: all 0.3s ease;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav.navbar a:hover {
+      color: #a58e75;
+      border-bottom: 2px solid #a58e75;
+    }
+
+    nav.navbar a.active {
+      color: #a58e75;
+      border-bottom: 2px solid #a58e75;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: auto;
+      background: #fffaf0;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
 
     h1, h2 {
@@ -32,15 +78,6 @@
       font-size: 1.8rem;
     }
 
-    .content {
-      max-width: 900px;
-      margin: auto;
-      background: #fffaf0;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-    }
-
     ul {
       padding-left: 20px;
     }
@@ -48,37 +85,6 @@
     a {
       color: #3a3a3a;
       text-decoration: underline;
-    }
-
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #e0d6c3;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      display: flex;
-      justify-content: center;
-      padding: 15px 0;
-      z-index: 999;
-    }
-
-    .navbar a {
-      color: #3a3a3a;
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: color 0.3s ease, border-bottom 0.3s ease;
-      padding-bottom: 4px;
-    }
-
-    .navbar a:hover {
-      color: #000;
-      border-bottom: 2px solid #3a3a3a;
-    }
-
-    .navbar a.active {
-      border-bottom: 2px solid #3a3a3a;
     }
   </style>
 </head>
