@@ -1,129 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <title>DapSound | En Mantenimiento</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <title>DapSound | Inicio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       padding: 0;
       background-color: #f5efe3;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #3a3a3a;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      min-height: 100vh;
-      padding: 20px;
+    }
+
+    .nav-wrapper {
+      background-color: #f5efe3;
+      padding: 20px 0;
     }
 
     nav {
-      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
       background-color: #e7dfd1;
       display: flex;
       justify-content: center;
-      gap: 40px;
-      padding: 15px 0;
+      gap: 80px;
+      padding: 25px;
       font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      font-size: 1.2rem;
+      font-weight: bold;
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
     }
 
     nav a {
       color: #3a3a3a;
       text-decoration: none;
-      padding: 6px 12px;
       transition: all 0.3s ease;
       border-bottom: 2px solid transparent;
     }
 
-    nav a:hover {
-      color: #a58e75;
-      border-bottom: 2px solid #a58e75;
-    }
-
-    .branding {
-      margin: 80px 0 40px;
-    }
-
-    .branding span {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      letter-spacing: 3px;
-      padding: 20px 50px;
-      border-radius: 16px;
-      background: linear-gradient(to right, #e9dfc9, #d5c3a5);
+    nav a:hover,
+    nav a.active {
       color: #3a2e1f;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.15rem;
-      color: #5a5142;
-      max-width: 700px;
-      line-height: 1.8;
-    }
-
-    .cat {
-      width: 140px;
-      height: 140px;
-      background: url('https://media.giphy.com/media/q1MeAPDDMb43K/giphy.gif') no-repeat center/contain;
-      animation: floatCat 3s ease-in-out infinite;
-      margin: 40px auto;
-    }
-
-    @keyframes floatCat {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-      100% { transform: translateY(0); }
-    }
-
-    .redes {
-      margin-top: 30px;
-    }
-
-    .redes a {
-      text-decoration: none;
-      color: #3a3a3a;
-      background-color: #e0d6c3;
-      padding: 12px 24px;
-      border-radius: 10px;
-      font-weight: bold;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      transition: background-color 0.3s;
-    }
-
-    .redes a:hover {
-      background-color: #d5cbb9;
-    }
-
-    .redes img {
-      width: 22px;
-      height: 22px;
-    }
-
-    footer {
-      margin-top: 50px;
-      font-size: 0.85rem;
-      color: #888;
+      border-bottom: 2px solid #3a2e1f;
     }
 
     @media (max-width: 768px) {
@@ -131,36 +53,19 @@
         flex-direction: column;
         gap: 15px;
       }
-
-      .branding span {
-        font-size: 2.2rem;
-        padding: 15px 30px;
-      }
-
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      .cat {
-        width: 100px;
-        height: 100px;
-      }
     }
   </style>
 </head>
 <body>
-
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="Sobre Nosotros.html">Sobre Nosotros</a>
-    <a href="beats.html">Beats Shop</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
-
+  <div class="nav-wrapper">
+    <nav>
+     <a href="index.html" class="nav-inicio active">Inicio</a>
+      <a href="Sobre Nosotros.html">Sobre Nosotros</a>
+      <a href="beats.html">Beats Shop</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+  
   <div class="branding">
     <span>DapSound</span>
   </div>
