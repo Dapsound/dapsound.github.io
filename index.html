@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DapSound | En Mantenimiento</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <title>Sobre Nosotros | DapSound</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <style>
     * {
@@ -16,15 +17,11 @@
       background-color: #f5efe3;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #3a3a3a;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      min-height: 100vh;
-      padding: 20px;
+      padding-top: 70px;
+      line-height: 1.6;
     }
 
-    nav {
+    nav.navbar {
       width: 100%;
       background-color: #e7dfd1;
       display: flex;
@@ -39,7 +36,7 @@
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
     }
 
-    nav a {
+    nav.navbar a {
       color: #3a3a3a;
       text-decoration: none;
       padding: 6px 12px;
@@ -47,135 +44,104 @@
       border-bottom: 2px solid transparent;
     }
 
-    nav a:hover {
+    nav.navbar a:hover {
       color: #a58e75;
       border-bottom: 2px solid #a58e75;
     }
 
-    .branding {
-      margin: 80px 0 40px;
+    nav.navbar a.active {
+      color: #a58e75;
+      border-bottom: 2px solid #a58e75;
     }
 
-    .branding span {
+    .content {
+      max-width: 900px;
+      margin: auto;
+      background: #fffaf0;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
       font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      letter-spacing: 3px;
-      padding: 20px 50px;
-      border-radius: 16px;
-      background: linear-gradient(to right, #e9dfc9, #d5c3a5);
-      color: #3a2e1f;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 2.8rem;
       margin-bottom: 20px;
     }
 
-    p {
-      font-size: 1.15rem;
-      color: #5a5142;
-      max-width: 700px;
-      line-height: 1.8;
+    h2 {
+      margin-top: 40px;
+      font-size: 1.8rem;
     }
 
-    .cat {
-      width: 140px;
-      height: 140px;
-      background: url('https://media.giphy.com/media/q1MeAPDDMb43K/giphy.gif') no-repeat center/contain;
-      animation: floatCat 3s ease-in-out infinite;
-      margin: 40px auto;
+    ul {
+      padding-left: 20px;
     }
 
-    @keyframes floatCat {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-      100% { transform: translateY(0); }
-    }
-
-    .redes {
-      margin-top: 30px;
-    }
-
-    .redes a {
-      text-decoration: none;
+    a {
       color: #3a3a3a;
-      background-color: #e0d6c3;
-      padding: 12px 24px;
-      border-radius: 10px;
-      font-weight: bold;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      transition: background-color 0.3s;
-    }
-
-    .redes a:hover {
-      background-color: #d5cbb9;
-    }
-
-    .redes img {
-      width: 22px;
-      height: 22px;
-    }
-
-    footer {
-      margin-top: 50px;
-      font-size: 0.85rem;
-      color: #888;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .branding span {
-        font-size: 2.2rem;
-        padding: 15px 30px;
-      }
-
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      .cat {
-        width: 100px;
-        height: 100px;
-      }
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="Sobre Nosotros.html">Sobre Nosotros</a>
+  <nav class="navbar">
+    <a href="index.html">Inicio</a>
     <a href="beats.html">Beats Shop</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="nosotros.html" class="active">Sobre Nosotros</a>
     <a href="contacto.html">Contacto</a>
   </nav>
 
-  <div class="branding">
-    <span>DapSound</span>
+  <div class="content">
+    <h1>Bienvenido a DapSound</h1>
+    <p><strong>Mezcla y Mastering, Edición de Audio Profesional, Producción Musical y Beats</strong></p>
+
+    <p>En <strong>DapSound</strong> nos especializamos en llevar cada proyecto sonoro a su máximo potencial. Somos más que un estudio: somos un espacio creativo y técnico donde la calidad, la estética y la emoción del sonido se unen para generar resultados de alto nivel.</p>
+
+    <p>Con una experiencia sólida en el sector audiovisual y musical, ofrecemos servicios 100 % personalizados para artistas, empresas, creadores de contenido y narradores que buscan un producto final de calidad profesional.</p>
+
+    <h2>Mezcla y Mastering Profesional</h2>
+    <p>La diferencia entre una demo y una obra terminada está en la mezcla. En DapSound nos encargamos de equilibrar, limpiar, procesar y dar vida a tu música para que suene impecable en cualquier sistema de sonido, desde auriculares hasta escenarios.</p>
+    <p>El mastering aporta el toque final: volumen óptimo, coherencia tonal y un acabado comercial. Trabajamos bajo estándares de la industria, respetando la identidad artística de cada proyecto.</p>
+
+    <h2> Edición de Audio para Audiolibros, Podcasts, Publicidad y más</h2>
+    <p>Si tienes una grabación con voz, podemos convertirla en un producto profesional. Realizamos edición avanzada de audio para:</p>
+    <ul>
+      <li>Audiolibros narrados</li>
+      <li>Podcasts (voz limpia, ecualización, eliminación de ruidos y silencios)</li>
+      <li>Anuncios y cuñas publicitarias</li>
+      <li>Videos corporativos, e-learning o presentaciones</li>
+    </ul>
+    <p>Tu mensaje debe sonar claro, directo y profesional. En DapSound nos aseguramos de que así sea.</p>
+
+    <h2>Producción de Instrumentales Personalizadas</h2>
+    <p>¿Tienes una idea? Nosotros la convertimos en música.</p>
+    <p>Creamos instrumentales a medida, adaptadas a tu estilo, género, tempo y emociones. Ya sea para un proyecto musical, una campaña publicitaria o contenido multimedia, trabajamos contigo para construir el beat perfecto desde cero.</p>
+    <p>Cada producción es única, exclusiva y entregada con calidad de estudio.</p>
+
+    <h2>Tienda de Beats (Muy Pronto)</h2>
+    <p>Muy pronto estará disponible nuestra tienda online con beats de distintos géneros: Trap, Reggaeton, R&B, Drill, Pop, Lo-Fi, y más.</p>
+    <p>Podrás escuchar, filtrar por BPM, key o género, y adquirir licencias para usar en tus canciones, videos o proyectos personales.</p>
+
+    <h2> ¿Por qué elegir DapSound?</h2>
+    <ul>
+      <li> Sonido profesional con criterio estético</li>
+      <li> Trato directo, humano y cercano</li>
+      <li> Equipamiento y software de alta gama</li>
+      <li> Entrega organizada y lista para distribución</li>
+      <li> Compromiso con los plazos</li>
+      <li> Posibilidad de paquetes y servicios combinados</li>
+    </ul>
+
+    <h2>¿Empezamos?</h2>
+    <p>Puedes visitar nuestra sección de <a href="contacto.html">Contacto</a> para solicitar un presupuesto sin compromiso.</p>
+    <p>También puedes seguir nuestro trabajo y novedades en Instagram: <a href="https://instagram.com/dap.sound" target="_blank">@dap.sound</a></p>
   </div>
-
-  <h1>Estamos en mantenimiento</h1>
-  <p>Estamos trabajando para ofrecerte una experiencia sonora única y de primer nivel.<br>Volveremos muy pronto. Gracias por tu paciencia.</p>
-
-  <div class="cat"></div>
-
-  <div class="redes">
-    <a href="https://instagram.com/dap.sound" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-      Síguenos en Instagram
-    </a>
-  </div>
-
-  <footer>&copy; 2025 DapSound. Todos los derechos reservados.</footer>
 </body>
 </html>
